@@ -29,3 +29,7 @@ class CarManager:
     def speed_up(self):
         self.car_speed += MOVE_INCREMENT
         self.spawn_chance_max -= 1
+
+    def reset(self):
+        self.car_speed = STARTING_MOVE_DISTANCE
+        self.spawn_chance_max = 27

@@ -23,8 +23,10 @@ while game_is_on:
     # Detect car collision
     for car in car_manager.all_cars:
         if player.distance(car) < 20:
-            scoreboard.game_over()
-            game_is_on = False
+            scoreboard.reset()
+            player.reset()
+            car_manager.reset()
+            time.sleep(0.5)
     # Detect finish
     if player.check_finish():
         scoreboard.level_up()
